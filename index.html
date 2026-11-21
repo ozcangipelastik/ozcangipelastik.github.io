@@ -4,411 +4,272 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Özcan Gipe Lastik - Çorap, triko, eldiven, korse ve kroşeta gipe lastikleri imalatı ve toptan satışı.">
+  <meta name="description" content="Özcan Gipe Lastik - Çorap, triko, eldiven, korse ve kroşeta üretimi için kaliteli gipe lastikleri. Toptan satış.">
   <title>Özcan Gipe Lastik | İmalat ve Toptan Satış</title>
-
   <style>
     :root {
-      --lacivert: #20205f;
-      --kirmizi: #d71920;
-      --siyah: #171717;
-      --gri: #f5f5f7;
+      --lacivert: #142b4a;
+      --kirmizi: #c92835;
+      --metin: #263449;
+      --gri: #f3f5f8;
       --beyaz: #ffffff;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-
     body {
       font-family: Arial, Helvetica, sans-serif;
-      color: var(--siyah);
+      color: var(--metin);
       line-height: 1.7;
       background: var(--beyaz);
     }
+    a { text-decoration: none; color: inherit; }
+    .container { width: min(1120px, 90%); margin: auto; }
 
     header {
       background: var(--beyaz);
-      border-bottom: 1px solid #e8e8e8;
+      border-bottom: 1px solid #e7eaf0;
       position: sticky;
       top: 0;
       z-index: 10;
     }
-
     .navbar {
-      max-width: 1160px;
-      margin: auto;
-      padding: 18px 24px;
+      min-height: 76px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       gap: 20px;
     }
-
     .logo {
       color: var(--lacivert);
-      font-size: 25px;
+      font-size: 23px;
       font-weight: 800;
-      text-decoration: none;
-      letter-spacing: -1px;
+      letter-spacing: -.5px;
     }
-
-    nav {
-      display: flex;
-      gap: 25px;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: var(--siyah);
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 700;
-    }
-
+    .logo span { color: var(--kirmizi); }
+    nav { display: flex; gap: 25px; flex-wrap: wrap; }
+    nav a { font-size: 14px; font-weight: 700; }
     nav a:hover { color: var(--kirmizi); }
 
     .hero {
-      background: linear-gradient(120deg, #20205f 0%, #303078 100%);
+      background: linear-gradient(120deg, #102541, #244b75);
       color: white;
-      padding: 105px 24px;
-      text-align: center;
+      padding: 105px 0;
     }
-
-    .hero-content {
-      max-width: 850px;
-      margin: auto;
-    }
-
+    .hero-content { max-width: 760px; }
     .eyebrow {
-      color: #f4b7b9;
+      color: #ffb9bf;
       font-weight: 700;
-      letter-spacing: 3px;
+      letter-spacing: 2px;
       font-size: 13px;
       text-transform: uppercase;
     }
-
-    .hero h1 {
-      font-size: clamp(38px, 6vw, 65px);
+    h1 {
+      font-size: clamp(36px, 6vw, 58px);
       line-height: 1.12;
-      margin: 20px 0;
+      margin: 18px 0;
     }
-
-    .hero p {
-      max-width: 680px;
-      margin: auto;
-      color: #ededf5;
-      font-size: 18px;
-    }
-
+    .hero p { font-size: 18px; max-width: 650px; color: #e4eaf2; }
     .button {
       display: inline-block;
-      margin-top: 30px;
-      padding: 14px 28px;
-      border-radius: 5px;
+      margin-top: 28px;
       background: var(--kirmizi);
       color: white;
-      text-decoration: none;
+      padding: 13px 24px;
+      border-radius: 6px;
       font-weight: 700;
-      transition: 0.2s;
     }
+    .button:hover { background: #a91f2b; }
 
-    .button:hover { background: #b51218; }
-
-    section {
-      padding: 80px 24px;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: auto;
-    }
-
+    section { padding: 78px 0; }
     .section-title {
       color: var(--lacivert);
-      font-size: 34px;
-      margin-bottom: 18px;
-      text-align: center;
+      font-size: 32px;
+      margin-bottom: 14px;
     }
+    .section-intro { max-width: 720px; color: #647184; }
+    .about { background: var(--gri); }
 
-    .section-intro {
-      max-width: 760px;
-      margin: 0 auto 38px;
-      text-align: center;
-      color: #555;
-    }
-
-    .about {
-      background: var(--gri);
-    }
-
-    .about-text {
-      max-width: 850px;
-      margin: auto;
-      font-size: 16px;
-    }
-
-    .about-text p { margin-bottom: 18px; }
-
-    .red-line {
-      width: 65px;
-      height: 5px;
-      background: var(--kirmizi);
-      margin: 0 auto 28px;
-    }
-
-    .products-grid {
+    .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 32px;
     }
-
-    .product {
-      border: 1px solid #e7e7e7;
-      border-radius: 8px;
-      overflow: hidden;
+    .card {
       background: white;
-      transition: 0.2s;
+      border: 1px solid #e7eaf0;
+      border-radius: 10px;
+      padding: 26px;
+      box-shadow: 0 8px 25px rgba(20,43,74,.05);
     }
-
-    .product:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 25px #00000012;
-    }
-
-    .product-photo {
-      min-height: 155px;
-      display: grid;
-      place-items: center;
-      background: #f0f0f5;
-      color: var(--lacivert);
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    .product h3 {
-      padding: 18px;
-      color: var(--lacivert);
-      font-size: 18px;
+    .card h3 { color: var(--lacivert); margin-bottom: 10px; }
+    .card p { color: #647184; font-size: 15px; }
+    .number {
+      color: var(--kirmizi);
+      font-size: 27px;
+      font-weight: 800;
+      margin-bottom: 10px;
     }
 
     .quality {
       background: var(--lacivert);
       color: white;
-      text-align: center;
     }
-
     .quality .section-title { color: white; }
-
-    .quality p {
-      max-width: 760px;
-      margin: auto;
-      color: #ededf5;
+    .quality .section-intro { color: #dce5ef; }
+    .quality-points {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin-top: 30px;
+    }
+    .quality-points strong {
+      display: block;
+      color: #ffb9bf;
+      font-size: 18px;
+      margin-bottom: 7px;
     }
 
-    .contact {
-      background: var(--gri);
-      text-align: center;
-    }
-
-    .contact-details {
+    .contact { background: var(--gri); }
+    .contact-box {
+      background: white;
+      border-radius: 12px;
+      padding: 32px;
       margin-top: 25px;
-      line-height: 2;
+      border: 1px solid #e7eaf0;
     }
-
-    .contact-details a {
-      color: var(--lacivert);
-      font-weight: 700;
-      text-decoration: none;
-    }
-
+    .contact-box p { margin: 8px 0; }
     footer {
-      background: #17172f;
-      color: white;
+      background: #0d1d32;
+      color: #dce5ef;
       text-align: center;
-      padding: 25px;
+      padding: 25px 0;
       font-size: 14px;
     }
 
-    .whatsapp {
-      position: fixed;
-      right: 22px;
-      bottom: 22px;
-      z-index: 20;
-      background: #20b85a;
-      color: white;
-      text-decoration: none;
-      padding: 13px 19px;
-      border-radius: 30px;
-      font-weight: 700;
-      box-shadow: 0 4px 15px #00000030;
-    }
-
-    @media (max-width: 650px) {
-      .navbar {
-        flex-direction: column;
-      }
-
-      nav {
-        justify-content: center;
-        gap: 14px;
-      }
-
-      .hero { padding: 75px 20px; }
-      section { padding: 60px 20px; }
-      .section-title { font-size: 29px; }
+    @media (max-width: 720px) {
+      .navbar { padding: 15px 0; align-items: flex-start; flex-direction: column; }
+      nav { gap: 12px 18px; }
+      .hero { padding: 75px 0; }
+      .cards, .quality-points { grid-template-columns: 1fr; }
+      section { padding: 58px 0; }
     }
   </style>
 </head>
-
 <body>
 
-  <header>
-    <div class="navbar">
-      <a class="logo" href="#anasayfa">ÖZCAN GİPE</a>
-      <nav>
-        <a href="#anasayfa">Ana Sayfa</a>
-        <a href="#hakkimizda">Hakkımızda</a>
-        <a href="#urunler">Ürünlerimiz</a>
-        <a href="#iletisim">İletişim</a>
-      </nav>
+<header>
+  <div class="container navbar">
+    <a class="logo" href="#anasayfa">ÖZCAN <span>GİPE</span></a>
+    <nav>
+      <a href="#anasayfa">Ana Sayfa</a>
+      <a href="#hakkimizda">Hakkımızda</a>
+      <a href="#urunler">Ürünlerimiz</a>
+      <a href="#kalite">Kalite</a>
+      <a href="#iletisim">İletişim</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="anasayfa">
+    <div class="container hero-content">
+      <div class="eyebrow">Özcan Gipe Lastik</div>
+      <h1>Tekstil üretiminin güçlü ve esnek çözümü.</h1>
+      <p>
+        Çorap, triko, eldiven, korse ve kroşeta üretimine yönelik
+        gipe lastiklerinde imalat ve toptan satış.
+      </p>
+      <a class="button" href="#urunler">Ürünlerimizi İnceleyin</a>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <section class="hero" id="anasayfa">
-      <div class="hero-content">
-        <div class="eyebrow">İmalat · Toptan Satış</div>
-        <h1>Özcan Gipe Lastik</h1>
-        <p>
-          Tekstil sektörüne yönelik kaliteli gipe lastik üretimi
-          ve güvenilir toptan tedarik çözümleri.
-        </p>
-        <a class="button" href="#iletisim">Teklif İsteyin</a>
+  <section class="about" id="hakkimizda">
+    <div class="container">
+      <h2 class="section-title">Hakkımızda</h2>
+      <p class="section-intro">
+        Özcan Gipe olarak İstanbul Zeytinburnu'nda, tekstil sektörünün
+        ihtiyaçlarına yönelik gipe lastikleri imalatı ve toptan satışı
+        gerçekleştiriyoruz. Farklı numara ve ölçülerdeki ürünlerimizle
+        tekstil üreticilerinin ihtiyaçlarına çözüm sunmayı hedefliyoruz.
+        Kaliteli ürün ve güvenilir hizmet anlayışını ön planda tutuyoruz.
+      </p>
+    </div>
+  </section>
+
+  <section id="urunler">
+    <div class="container">
+      <h2 class="section-title">Ürünlerimiz</h2>
+      <p class="section-intro">
+        Farklı üretim ihtiyaçlarına uygun gipe lastiği seçeneklerimiz.
+        Fiyat ve sipariş bilgisi için bizimle iletişime geçebilirsiniz.
+      </p>
+      <div class="cards">
+        <article class="card">
+          <div class="number">01</div>
+          <h3>Numara Seçenekleri</h3>
+          <p>10 No, 12 No ve 14 No gipe lastiği seçenekleri.</p>
+        </article>
+        <article class="card">
+          <div class="number">02</div>
+          <h3>Ölçü Seçenekleri</h3>
+          <p>90/90, 90/100 ve 90/150 ölçülerinde ürün seçenekleri.</p>
+        </article>
+        <article class="card">
+          <div class="number">03</div>
+          <h3>Siyah ve Beyaz</h3>
+          <p>1. kalite siyah ve beyaz gipe lastikleri.</p>
+        </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="about" id="hakkimizda">
-      <div class="container">
-        <h2 class="section-title">Hakkımızda</h2>
-        <div class="red-line"></div>
-
-        <div class="about-text">
-          <p>
-            Özcan Gipe Lastik, İstanbul Zeytinburnu'nda bulunan
-            Erciyes Sanayi Sitesi'nde faaliyet gösteren işletmemiz;
-            çorap, triko, eldiven, kroşeta ve korse üretiminde
-            kullanılan gipe lastiklerin imalatını gerçekleştirmektedir.
-          </p>
-
-          <p>
-            Tekstil sektörünün ihtiyaçlarına yönelik olarak
-            10 No, 12 No, 14 No, (90/90), (90/100) ve (90/150)
-            seçenekleriyle 1. kalite siyah ve beyaz gipe lastiklerini,
-            uygun maliyet ve toptan satış avantajlarıyla müşterilerimize sunmaktayız.
-          </p>
-
-          <p>
-            Yılların kazandırdığı üretim tecrübesiyle, tekstil
-            imalatçılarına dayanıklı, esnek ve yüksek kalite
-            standartlarına sahip ham madde tedarik ederek üretim
-            süreçlerine güvenilir çözümler sunuyoruz.
-          </p>
-
-          <p>
-            Üretiminize değer katacak kaliteli gipe lastik
-            ihtiyaçlarınız için bizimle iletişime geçebilirsiniz.
-          </p>
+  <section class="quality" id="kalite">
+    <div class="container">
+      <h2 class="section-title">Üretim ve Kalite Anlayışımız</h2>
+      <p class="section-intro">
+        Tekstil üreticilerinin ihtiyaçlarını dikkate alan ürün ve hizmet anlayışı.
+      </p>
+      <div class="quality-points">
+        <div>
+          <strong>Ürün Kalitesi</strong>
+          <p>Ürünlerimizde kaliteyi ve kullanım ihtiyacını ön planda tutuyoruz.</p>
+        </div>
+        <div>
+          <strong>Toptan Satış</strong>
+          <p>İşletmelerin toplu ürün ihtiyaçlarına yönelik satış yapıyoruz.</p>
+        </div>
+        <div>
+          <strong>Güvenilir Hizmet</strong>
+          <p>Müşterilerimizle güvene dayalı iş ilişkileri kurmayı hedefliyoruz.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="urunler">
-      <div class="container">
-        <h2 class="section-title">Ürünlerimiz</h2>
-        <div class="red-line"></div>
-        <p class="section-intro">
-          Tekstil üretimine yönelik gipe lastik çeşitlerimizi
-          ve ürün seçeneklerimizi inceleyebilirsiniz.
-        </p>
-
-        <div class="products-grid">
-          <article class="product">
-            <div class="product-photo">Ürün fotoğrafı eklenecek</div>
-            <h3>Siyah Gipe Lastik</h3>
-          </article>
-
-          <article class="product">
-            <div class="product-photo">Ürün fotoğrafı eklenecek</div>
-            <h3>Beyaz Gipe Lastik</h3>
-          </article>
-
-          <article class="product">
-            <div class="product-photo">Ürün fotoğrafı eklenecek</div>
-            <h3>Farklı Numara Seçenekleri</h3>
-          </article>
-
-          <article class="product">
-            <div class="product-photo">Ürün fotoğrafı eklenecek</div>
-            <h3>Toptan Ürün Tedariği</h3>
-          </article>
-        </div>
-
-        <div style="text-align:center">
-          <a class="button" href="#iletisim">Ürünler İçin Teklif İsteyin</a>
-        </div>
+  <section class="contact" id="iletisim">
+    <div class="container">
+      <h2 class="section-title">İletişim</h2>
+      <p class="section-intro">
+        Ürünlerimiz, ölçülerimiz ve toptan siparişleriniz hakkında bilgi almak için
+        bizimle iletişime geçebilirsiniz.
+      </p>
+      <div class="contact-box">
+        <p><strong>İşletme:</strong> Özcan Gipe Lastik</p>
+        <p><strong>Adres:</strong> Erciyes Sanayi Sitesi, Zeytinburnu, İstanbul</p>
+        <p><strong>Satış:</strong> Toptan satış</p>
+        <p><strong>Instagram:</strong> @gipelastik</p>
       </div>
-    </section>
+    </div>
+  </section>
+</main>
 
-    <section class="quality">
-      <div class="container">
-        <h2 class="section-title">Kalite ve Güven</h2>
-        <p>
-          Üretim tecrübemiz, ürün çeşitliliğimiz ve toptan tedarik
-          anlayışımızla tekstil sektörünün ihtiyaçlarına çözüm sunuyoruz.
-          İşletmenizin ihtiyaçlarına uygun ürün seçenekleri için bize ulaşın.
-        </p>
-      </div>
-    </section>
-
-    <section class="contact" id="iletisim">
-      <div class="container">
-        <h2 class="section-title">İletişim</h2>
-        <div class="red-line"></div>
-        <p class="section-intro">
-          Ürünlerimiz, toptan satış ve teklif talepleriniz için
-          bizimle iletişime geçebilirsiniz.
-        </p>
-
-        <div class="contact-details">
-          <p><strong>Özcan Gipe Lastik</strong></p>
-          <p>Telefon: <a href="tel:+905365481660">0536 548 16 60</a></p>
-          <p>
-            Adres: Maltepe Davutpaşa Çifte Havuzlar Yolu,
-            Erciyes Sanayi Sitesi, C Blok No: 80,
-            Zeytinburnu / İstanbul
-          </p>
-          <a class="button" href="https://wa.me/905365481660"
-             target="_blank" rel="noopener">
-            WhatsApp ile İletişime Geçin
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
+<footer>
+  <div class="container">
     © 2026 Özcan Gipe Lastik. Tüm hakları saklıdır.
-  </footer>
-
-  <a class="whatsapp" href="https://wa.me/905365481660"
-     target="_blank" rel="noopener" aria-label="WhatsApp ile iletişim">
-    WhatsApp
-  </a>
+  </div>
+</footer>
 
 </body>
 </html>

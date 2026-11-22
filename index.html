@@ -866,49 +866,194 @@
           </p>
         </div>
 
-        <div class="product-grid">
-          <article class="product-card">
-            <div class="product-number">10</div>
-            <h3>10 No Gipe Lastik</h3>
-            <p>Tekstil üretiminde kullanılan gipe lastik çeşidimiz.</p>
-            <span class="quality">1. Kalite · Siyah / Beyaz</span>
-          </article>
+<style>
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+.product-expand {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+}
+.product-expand summary {
+  list-style: none;
+  cursor: pointer;
+}
+.product-expand summary::-webkit-details-marker {
+  display: none;
+}
+.product-cover {
+  width: 100%;
+  height: 190px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.product-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  padding-top: 18px;
+}
+.product-gallery img {
+  width: 100%;
+  height: 145px;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+.product-expand summary::after {
+  content: "Fotoğrafları görmek için tıklayın +";
+  display: block;
+  margin-top: 14px;
+  color: #a64d5b;
+  font-weight: bold;
+  font-size: 13px;
+}
+.product-expand[open] summary::after {
+  content: "Fotoğrafları kapat −";
+}
+.product-gallery-title {
+  grid-column: 1 / -1;
+  color: #34445f;
+  font-weight: bold;
+}
+</style>
 
-          <article class="product-card">
-            <div class="product-number">12</div>
-            <h3>12 No Gipe Lastik</h3>
-            <p>Farklı tekstil üretim ihtiyaçlarına yönelik ürün seçeneği.</p>
-            <span class="quality">1. Kalite · Siyah / Beyaz</span>
-          </article>
+<div class="product-grid">
 
-          <article class="product-card">
-            <div class="product-number">14</div>
-            <h3>14 No Gipe Lastik</h3>
-            <p>Tekstil imalatçılarına yönelik ürün çeşitlerimizden biri.</p>
-            <span class="quality">1. Kalite · Siyah / Beyaz</span>
-          </article>
+  <details class="product-card product-expand">
+    <summary>
+      <img class="product-cover" src="gipe-beyaz-bobinler.jpg" alt="10 No gipe lastik">
+      <div class="product-number">10</div>
+      <h3>10 No Gipe Lastik</h3>
+      <p>Tekstil üretiminde kullanılan gipe lastik çeşidimiz.</p>
+      <span class="quality">1. Kalite · Siyah / Beyaz</span>
+    </summary>
+    <div class="product-gallery">
+      <div class="product-gallery-title">Ürün Fotoğrafları</div>
+      <img src="gipe-beyaz-bobinler.jpg" alt="Beyaz gipe bobinleri">
+      <img src="gipe-beyaz-dortlu.jpg" alt="Dörtlü beyaz gipe">
+      <img src="gipe-beyaz-tek.jpg" alt="Tek beyaz gipe">
+      <img src="gipe-siyah-beyaz-ikili.jpg" alt="Siyah beyaz ikili gipe">
+      <img src="gipe-siyah-beyaz-karsilastirma.jpg" alt="Siyah beyaz gipe karşılaştırma">
+      <img src="gipe-siyah-bobinler.jpg" alt="Siyah gipe bobinleri">
+      <img src="gipe-siyah-dortlu.jpg" alt="Dörtlü siyah gipe">
+      <img src="gipe-siyah-tek.jpg" alt="Tek siyah gipe">
+    </div>
+  </details>
 
-          <article class="product-card">
-            <div class="product-number">90/90</div>
-            <h3>90/90 Gipe Lastik</h3>
-            <p>Farklı kullanım alanlarına uygun ölçü seçeneği.</p>
-            <span class="quality">1. Kalite · Siyah / Beyaz</span>
-          </article>
+  <details class="product-card product-expand">
+    <summary>
+      <img class="product-cover" src="gipe-beyaz-dortlu.jpg" alt="12 No gipe lastik">
+      <div class="product-number">12</div>
+      <h3>12 No Gipe Lastik</h3>
+      <p>Farklı tekstil üretim ihtiyaçlarına yönelik ürün seçeneği.</p>
+      <span class="quality">1. Kalite · Siyah / Beyaz</span>
+    </summary>
+    <div class="product-gallery">
+      <div class="product-gallery-title">Ürün Fotoğrafları</div>
+      <img src="gipe-beyaz-bobinler.jpg" alt="Beyaz gipe bobinleri">
+      <img src="gipe-beyaz-dortlu.jpg" alt="Dörtlü beyaz gipe">
+      <img src="gipe-beyaz-tek.jpg" alt="Tek beyaz gipe">
+      <img src="gipe-siyah-beyaz-ikili.jpg" alt="Siyah beyaz ikili gipe">
+      <img src="gipe-siyah-beyaz-karsilastirma.jpg" alt="Siyah beyaz gipe karşılaştırma">
+      <img src="gipe-siyah-bobinler.jpg" alt="Siyah gipe bobinleri">
+      <img src="gipe-siyah-dortlu.jpg" alt="Dörtlü siyah gipe">
+      <img src="gipe-siyah-tek.jpg" alt="Tek siyah gipe">
+    </div>
+  </details>
 
-          <article class="product-card">
-            <div class="product-number">90/100</div>
-            <h3>90/100 Gipe Lastik</h3>
-            <p>Tekstil üretim süreçlerinde kullanılan ürün çeşidimiz.</p>
-            <span class="quality">1. Kalite · Siyah / Beyaz</span>
-          </article>
+  <details class="product-card product-expand">
+    <summary>
+      <img class="product-cover" src="gipe-beyaz-tek.jpg" alt="14 No gipe lastik">
+      <div class="product-number">14</div>
+      <h3>14 No Gipe Lastik</h3>
+      <p>Tekstil imalatçılarına yönelik ürün çeşitlerimizden biri.</p>
+      <span class="quality">1. Kalite · Siyah / Beyaz</span>
+    </summary>
+    <div class="product-gallery">
+      <div class="product-gallery-title">Ürün Fotoğrafları</div>
+      <img src="gipe-beyaz-bobinler.jpg" alt="Beyaz gipe bobinleri">
+      <img src="gipe-beyaz-dortlu.jpg" alt="Dörtlü beyaz gipe">
+      <img src="gipe-beyaz-tek.jpg" alt="Tek beyaz gipe">
+      <img src="gipe-siyah-beyaz-ikili.jpg" alt="Siyah beyaz ikili gipe">
+      <img src="gipe-siyah-beyaz-karsilastirma.jpg" alt="Siyah beyaz gipe karşılaştırma">
+      <img src="gipe-siyah-bobinler.jpg" alt="Siyah gipe bobinleri">
+      <img src="gipe-siyah-dortlu.jpg" alt="Dörtlü siyah gipe">
+      <img src="gipe-siyah-tek.jpg" alt="Tek siyah gipe">
+    </div>
+  </details>
 
-          <article class="product-card">
-            <div class="product-number">90/150</div>
-            <h3>90/150 Gipe Lastik</h3>
-            <p>Ürün grubumuzdaki farklı ölçü seçeneklerinden biri.</p>
-            <span class="quality">1. Kalite · Siyah / Beyaz</span>
-          </article>
-        </div>
+  <details class="product-card product-expand">
+    <summary>
+      <img class="product-cover" src="gipe-siyah-beyaz-ikili.jpg" alt="90/90 gipe lastik">
+      <div class="product-number">90/90</div>
+      <h3>90/90 Gipe Lastik</h3>
+      <p>Farklı kullanım alanlarına uygun ölçü seçeneği.</p>
+      <span class="quality">1. Kalite · Siyah / Beyaz</span>
+    </summary>
+    <div class="product-gallery">
+      <div class="product-gallery-title">Ürün Fotoğrafları</div>
+      <img src="gipe-beyaz-bobinler.jpg" alt="Beyaz gipe bobinleri">
+      <img src="gipe-beyaz-dortlu.jpg" alt="Dörtlü beyaz gipe">
+      <img src="gipe-beyaz-tek.jpg" alt="Tek beyaz gipe">
+      <img src="gipe-siyah-beyaz-ikili.jpg" alt="Siyah beyaz ikili gipe">
+      <img src="gipe-siyah-beyaz-karsilastirma.jpg" alt="Siyah beyaz gipe karşılaştırma">
+      <img src="gipe-siyah-bobinler.jpg" alt="Siyah gipe bobinleri">
+      <img src="gipe-siyah-dortlu.jpg" alt="Dörtlü siyah gipe">
+      <img src="gipe-siyah-tek.jpg" alt="Tek siyah gipe">
+    </div>
+  </details>
+
+  <details class="product-card product-expand">
+    <summary>
+      <img class="product-cover" src="gipe-siyah-bobinler.jpg" alt="90/100 gipe lastik">
+      <div class="product-number">90/100</div>
+      <h3>90/100 Gipe Lastik</h3>
+      <p>Tekstil üretim süreçlerinde kullanılan ürün çeşidimiz.</p>
+      <span class="quality">1. Kalite · Siyah / Beyaz</span>
+    </summary>
+    <div class="product-gallery">
+      <div class="product-gallery-title">Ürün Fotoğrafları</div>
+      <img src="gipe-beyaz-bobinler.jpg" alt="Beyaz gipe bobinleri">
+      <img src="gipe-beyaz-dortlu.jpg" alt="Dörtlü beyaz gipe">
+      <img src="gipe-beyaz-tek.jpg" alt="Tek beyaz gipe">
+      <img src="gipe-siyah-beyaz-ikili.jpg" alt="Siyah beyaz ikili gipe">
+      <img src="gipe-siyah-beyaz-karsilastirma.jpg" alt="Siyah beyaz gipe karşılaştırma">
+      <img src="gipe-siyah-bobinler.jpg" alt="Siyah gipe bobinleri">
+      <img src="gipe-siyah-dortlu.jpg" alt="Dörtlü siyah gipe">
+      <img src="gipe-siyah-tek.jpg" alt="Tek siyah gipe">
+    </div>
+  </details>
+
+  <details class="product-card product-expand">
+    <summary>
+      <img class="product-cover" src="gipe-siyah-dortlu.jpg" alt="90/150 gipe lastik">
+      <div class="product-number">90/150</div>
+      <h3>90/150 Gipe Lastik</h3>
+      <p>Ürün grubumuzdaki farklı ölçü seçeneklerinden biri.</p>
+      <span class="quality">1. Kalite · Siyah / Beyaz</span>
+    </summary>
+    <div class="product-gallery">
+      <div class="product-gallery-title">Ürün Fotoğrafları</div>
+      <img src="gipe-beyaz-bobinler.jpg" alt="Beyaz gipe bobinleri">
+      <img src="gipe-beyaz-dortlu.jpg" alt="Dörtlü beyaz gipe">
+      <img src="gipe-beyaz-tek.jpg" alt="Tek beyaz gipe">
+      <img src="gipe-siyah-beyaz-ikili.jpg" alt="Siyah beyaz ikili gipe">
+      <img src="gipe-siyah-beyaz-karsilastirma.jpg" alt="Siyah beyaz gipe karşılaştırma">
+      <img src="gipe-siyah-bobinler.jpg" alt="Siyah gipe bobinleri">
+      <img src="gipe-siyah-dortlu.jpg" alt="Dörtlü siyah gipe">
+      <img src="gipe-siyah-tek.jpg" alt="Tek siyah gipe">
+    </div>
+  </details>
+
+</div>
+
 
         <div class="product-note">
           Tüm ürünlerimiz 1. kalite standartlarında, siyah ve beyaz renk seçenekleriyle üretilmektedir.

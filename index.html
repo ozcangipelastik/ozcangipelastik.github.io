@@ -741,6 +741,25 @@
         bottom: 12px;
       }
     }
+ .brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.rotating-logo {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    flex-shrink: 0;
+    animation: logo-spin 8s linear infinite;
+}
+
+@keyframes logo-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
   </style>
 </head>
 
@@ -814,6 +833,7 @@
   <header>
     <div class="container nav">
       <a href="#anasayfa" class="brand" aria-label="Özcan Gipe Lastik ana sayfa
+        <img src="images/ozcan_gipe_amblem_transparent.png" class="rotating-logo" alt="Özcan Gipe Lastik Amblemi">
         <span class="ozcan">ÖZCAN</span>
         <span class="gipe">GİPE</span>
         <span class="lastik">LASTİK</span>

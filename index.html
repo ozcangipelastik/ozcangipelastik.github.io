@@ -201,12 +201,26 @@
 }
 
 @media (max-width: 768px) {
-    .hero-slider {
-        display: block;
+    .hero .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .hero-content {
         max-width: 100%;
+        width: 100%;
+    }
+
+    .hero-slider {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        width: 100%;
+        max-width: 100%;
+        height: 220px;
+        margin-top: 30px;
     }
 }
     .hero-content {

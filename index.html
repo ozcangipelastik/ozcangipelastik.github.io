@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -743,6 +744,51 @@
 </head>
 
 <body>
+  <style>
+#intro-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  background: #08182f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity .6s ease;
+}
+#intro-screen video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+#intro-screen.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+</style>
+
+<div id="intro-screen">
+  <video id="intro-video" autoplay muted playsinline>
+    <source src="ozcan_gipe_lastik_premium_intro.mp4" type="video/mp4">
+  </video>
+</div>
+
+<script>
+(function () {
+  const screen = document.getElementById("intro-screen");
+  const video = document.getElementById("intro-video");
+
+  function closeIntro() {
+    if (!screen) return;
+    screen.classList.add("hide");
+    setTimeout(() => screen.remove(), 650);
+  }
+
+  video.addEventListener("ended", closeIntro);
+  video.addEventListener("error", closeIntro);
+  setTimeout(closeIntro, 7000);
+})();
+</script>
 
   <div class="topbar">
     <div class="container topbar-inner">

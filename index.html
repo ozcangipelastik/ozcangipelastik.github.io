@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -385,22 +384,26 @@
     }
 
     .application {
+      overflow: hidden;
       border: 1px solid var(--border);
-      padding: 25px 12px;
-      text-align: center;
-      border-radius: 4px;
+      border-radius: 6px;
       color: var(--navy);
       font-weight: 700;
       background: white;
+      text-align: center;
+      box-shadow: 0 5px 18px rgba(16, 54, 95, .06);
     }
 
-    .application::before {
-      content: "";
+    .application img {
       display: block;
-      width: 26px;
-      height: 3px;
-      background: var(--red);
-      margin: 0 auto 15px;
+      width: 100%;
+      height: 155px;
+      object-fit: cover;
+    }
+
+    .application span {
+      display: block;
+      padding: 14px 10px 16px;
     }
 
     .quality-section {
@@ -935,12 +938,30 @@
         </div>
 
         <div class="applications-grid">
-          <div class="application">Çorap</div>
-          <div class="application">Triko</div>
-          <div class="application">Eldiven</div>
-          <div class="application">Korse</div>
-          <div class="application">Kroşeta</div>
-          <div class="application">Süs Dikiş Lastikleri</div>
+          <div class="application">
+            <img src="images/corap.jpg" alt="Çorap örnekleri" loading="lazy">
+            <span>Çorap</span>
+          </div>
+          <div class="application">
+            <img src="images/triko.jpg" alt="Triko ürünleri" loading="lazy">
+            <span>Triko</span>
+          </div>
+          <div class="application">
+            <img src="images/eldiven.jpg" alt="Örme eldivenler" loading="lazy">
+            <span>Eldiven</span>
+          </div>
+          <div class="application">
+            <img src="images/korse.jpg" alt="Korse ürünü" loading="lazy">
+            <span>Korse</span>
+          </div>
+          <div class="application">
+            <img src="images/kroseta.jpg" alt="Kroşeta dantel örneği" loading="lazy">
+            <span>Kroşeta</span>
+          </div>
+          <div class="application">
+            <img src="images/sus-dikis-lastigi.jpg" alt="Süs dikiş lastikleri" loading="lazy">
+            <span>Süs Dikiş Lastikleri</span>
+          </div>
         </div>
       </div>
     </section>
